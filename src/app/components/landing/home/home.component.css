@@ -1,0 +1,59 @@
+h1 {
+  font-family: 'CASTELLAR', cursive;
+  font-size: 82PX;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10%;
+  color: #CCC;
+}
+
+.books-home {
+  margin: 30px auto;
+  border: 3px solid white;
+}
+
+.panel{
+  margin-bottom: 10px;
+}
+
+img{
+
+}
+
+.centered {
+  position: absolute;
+  top: 15%;
+  MARGIN-LEFT: 5%;
+    width: 86%;
+  /* left: 50%;
+  transform: translate(-50%, -50%); */
+  font-family: 'CASTELLAR', cursive;
+  font-size: 82PX;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* margin-top: 10%; */
+  color: #CCC;
+}
+
+.bottom-right {
+  font-family: 'CASTELLAR', cursive;
+  position: absolute;
+  bottom: 15%;
+  right: 2%;
+  color: aliceblue;
+  width: 52%;
+}
+.bottom-right1{
+  position: absolute;
+  bottom: 8%;
+  right: 2%;
+}
+.panel h2 {
+  font-family: 'Wendy One', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 2%;
+  /* margin-bottom: 5px; */
+  /* margin-left: 125px; */
+  /* text-align: left; */
+}

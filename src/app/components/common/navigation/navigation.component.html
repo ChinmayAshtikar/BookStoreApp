@@ -1,0 +1,28 @@
+<nav class="topnav">
+  <a routerLink="/home">HOME</a>
+  <a routerLink="/book/store/default">BOOK STORE</a>
+  <ng-template [ngIf]="isUserLogged()">
+    <a routerLink="/user/profile/mine">PROFILE</a>
+    <a routerLink="/user/purchaseHistory">PURCHASE HISTORY</a>
+    <a *ngIf="isUserAdmin()" routerLink="/book/create">ADD YOUR BOOK</a>
+  </ng-template>
+  <div class="search-container">
+    <form #formDir="ngForm" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+      <input type="text" name="query" placeholder="TITLE, AUTHOR, GENRE, ISBN..." formControlName="query"/>
+      <button type="submit" [disabled]="searchForm.invalid"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+  <div>
+    <ng-template [ngIf]="!isUserLogged()">
+      <a class="menu-item-right" routerLink="/user/register">REGISTER</a>
+      <a class="menu-item-right" routerLink="/user/login">LOGIN</a>
+    </ng-template>
+    <ng-template [ngIf]="isUserLogged()">
+      <a class="menu-item-right" routerLink="/home" (click)="logout()">
+        {{getUsername()}}
+        <span>HELLO, {{username}}</span> LOGOUT
+      </a>
+      <a class="menu-item-right" routerLink="/user/cart">CART ({{cartItems}})</a>
+    </ng-template>
+  </div>
+</nav>
